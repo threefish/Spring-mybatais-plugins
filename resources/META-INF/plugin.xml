@@ -1,0 +1,30 @@
+<idea-plugin>
+    <id>com.threefish.spring.code.insight</id>
+    <name>Spring-mybatais-plugins</name>
+    <version>1.0.1</version>
+    <vendor email="huchuc@vip.qq.com" url="https://github.com/threefish/NutzCodeInsight">threefish</vendor>
+    <description><![CDATA[
+        <ul>
+        <li>1、解决在 Spring 中使用 @Mapper intellij 中会报 “Could not autowire. No beans of 'xxx' type found” 的错误</li>
+        </ul>
+    ]]></description>
+
+    <change-notes><![CDATA[
+      <em>none</em>
+    ]]>
+    </change-notes>
+    <idea-version since-build="173.0"/>
+
+    <depends>com.intellij.spring</depends>
+    <extensions defaultExtensionNs="com.intellij.spring">
+        <componentScanExtender implementation="com.threefish.spring.MybatisComponentScanExtender"/>
+    </extensions>
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+
+</idea-plugin>
